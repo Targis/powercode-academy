@@ -1,0 +1,90 @@
+.hero {
+    height: calc(100vh - 100px);
+    padding-bottom: 0;
+    align-items: center;
+    display: flex;
+    position: relative;
+    min-height: 700px;
+    padding-top: 0;
+    padding-bottom: 0;
+    @media (max-width: 1200px) {
+      font-size: .95em;
+    }
+    @media (max-width: 991px) {
+      text-align: center;
+      font-size: .925em;
+      min-height: auto;
+      // height: auto;
+    }
+    @media (max-width: 575px) {
+        font-size: 2.5vw;
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 520px;
+      height: 520px;
+      background-image: url('../images/dist/line.svg');
+      top: -270px;
+      left: calc(50% - 260px);
+      z-index: -1;
+      animation: rotate 20s linear infinite;
+    }
+    
+  .container {
+    position: relative;
+    background-position: 100% 35%;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      z-index: -1;
+    }
+    @media (min-width: 992px) {
+      background-image: url('../images/dist/hero.svg');
+      padding-top: 11em;
+      padding-bottom: 12.5em;
+    }
+    
+    &::after{
+      width: 558px;
+      height: 558px;
+      background-image: url('../images/dist/dashed-line.svg');
+      bottom: -63%;
+      left: 3%;
+      animation: rotate 80s linear infinite;
+    }
+  }
+}
+
+@keyframes rotate {
+  100% { 
+    transform: rotate(360deg); 
+  }  
+}
+
+.hero__header {
+  font-size: 2.925em;
+  line-height: 1.3;
+  font-weight: 900;
+  margin-bottom: .6em;
+}
+
+.hero__description {
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin-bottom: 1.6em;
+  // @media (max-width: 1200px) {
+  //   font-size: 17px;
+  // }
+}

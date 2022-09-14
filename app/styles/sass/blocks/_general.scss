@@ -1,0 +1,62 @@
+// GENERAL PROJECT STYLES
+
+body {
+  color: #173c5c;
+  background-color: #f4f4f4;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 10px;
+  line-height: 1.218;
+  color: #173c5c;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  &:hover {
+    text-decoration: none;
+    color: #173c5c;
+  }
+}
+
+.btn-secondary {
+  border: 1px solid #173c5c;
+}
+
+.btn-primary {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #fff;
+  background: #43a7ff;
+  padding: 16px 22px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section__title {
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 2.2em;
+}
+
+.visible-sm {
+  display: none;
+  @media (min-width: 576px) {
+    display: block;
+  }
+}
+
+.img-responsive {
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}

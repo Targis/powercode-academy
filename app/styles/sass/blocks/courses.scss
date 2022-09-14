@@ -1,0 +1,80 @@
+.courses {
+  .container {
+    position: relative;
+  }
+  .decorate {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 168px;
+    height: 131px;
+    top: 22px;
+    left: -60px;
+    transform: rotate(-26deg);
+    z-index: -1;
+    svg {
+      fill: #c1e8f2;
+    }
+  }
+  .decorate + .decorate {
+    top: auto;
+    left: auto;
+    bottom: -50px;
+    right: 0;
+    transform: rotate(19deg);
+    svg {
+      fill: #0094ff;
+    }
+  }
+}
+
+.course__card {
+  display: block;
+  // flex-direction: column;
+  // align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: $textcolor;
+  background: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  padding-bottom: 1.625em;
+  transition: all 0.25s ease;
+  background-color: $white;
+  backdrop-filter: $blur;
+  overflow: hidden;
+  &:hover {
+    text-decoration: none;
+    color: $textcolor;
+    .btn {
+      background-color: $accent;
+      color: #fff;
+      border-color: $accent;
+    }
+    .course__title {
+      font-weight: 700;
+    }
+  }
+  .btn {
+    font-weight: 700;
+    line-height: 1.5;
+  }
+}
+
+.course__img {
+  margin-bottom: 1em;
+  img {
+    display: inline-block;
+    max-width: 100%;
+  }
+}
+
+.course__title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0.625em;
+}
+
+.course__description {
+  margin-bottom: 2em;
+}
