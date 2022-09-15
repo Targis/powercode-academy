@@ -3,14 +3,19 @@
 	"version": "0.1.0",
 	"description": "Powercode Academy",
 	"main": "index.js",
+	"homepage": "http://targis.github.io/powercode-academy",
 	"author": "Yurii Kozyk",
 	"type": "module",
-	"browserslist": [ "last 10 versions" ],
+	"browserslist": [
+		"last 10 versions"
+	],
 	"license": "ISC",
-	"scripts": { 
-		"start": "gulp", 
-		"build": "gulp build"
- 	},
+	"scripts": {
+		"start": "gulp",
+		"build": "gulp build",
+		"predeploy": "gulp build",
+		"deploy": "gh-pages -d dist"
+	},
 	"devDependencies": {
 		"@babel/core": "^7.18.10",
 		"@babel/preset-env": "^7.18.10",
@@ -23,6 +28,7 @@
 		"browsersync-ssi": "^0.2.4",
 		"cssnano": "^5.1.12",
 		"del": "^7.0.0",
+		"gh-pages": "^4.0.0",
 		"gulp": "^4.0.2",
 		"gulp-changed": "^4.0.3",
 		"gulp-concat": "^2.6.1",
