@@ -7,7 +7,10 @@
 	"type": "module",
 	"browserslist": [ "last 10 versions" ],
 	"license": "ISC",
-	"scripts": { "start": "gulp" },
+	"scripts": { 
+		"start": "gulp", 
+		"build": "gulp build"
+ 	},
 	"devDependencies": {
 		"@babel/core": "^7.18.10",
 		"@babel/preset-env": "^7.18.10",
